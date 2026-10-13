@@ -116,11 +116,11 @@
       }
       .qr canvas { width: 72px; height: 72px; border-radius: 8px; background: white; }
       .qr span { font-size: 14px; font-weight: 650; }
-      .stage { display: grid; place-items: center; min-height: 560px; }
+      .stage { display: grid; place-items: center; min-height: 600px; }
       .tilt { transform: rotate(-7deg); }
       .device {
         width: 280px;
-        height: 580px;
+        height: 525px;
         padding: 11px;
         border-radius: 36px;
         background: linear-gradient(165deg, #314056, #0b1020 68%);
@@ -132,81 +132,8 @@
         overflow: hidden;
         border-radius: 26px;
         background: #f3f7fb;
-        color: #173038;
-        padding: 16px 12px 12px;
-        font-family: "Segoe UI", sans-serif;
       }
-      .top { display: flex; justify-content: space-between; align-items: flex-start; }
-      .top img { width: 42px; height: 42px; display: block; margin-bottom: 6px; }
-      .screen h2 { margin: 0; font-size: 26px; letter-spacing: -0.03em; font-weight: 700; color: #173038; }
-      .screen .date, .eyebrow { margin: 2px 0 0; color: #4e6872; font-size: 12px; }
-      .gear { width: 28px; height: 28px; color: #173038; }
-      .card {
-        margin-top: 12px;
-        padding: 12px;
-        border-radius: 16px;
-        background: rgba(255, 255, 255, 0.78);
-        border: 1px solid rgba(255, 255, 255, 0.85);
-      }
-      .card strong { display: block; margin-top: 2px; font-size: 18px; }
-      .card p { margin: 4px 0 0; color: #4e6872; font-size: 13px; line-height: 1.4; }
-      .month { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; font-weight: 700; }
-      .days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; margin-top: 8px; text-align: center; font-size: 11px; }
-      .days b { color: #3e5660; font-weight: 700; }
-      .days i {
-        display: grid;
-        place-items: center;
-        height: 32px;
-        border-radius: 9px;
-        font-style: normal;
-        font-weight: 600;
-      }
-      .days i.today { box-shadow: inset 0 0 0 1.5px #0e9a8c; }
-      .days i.dot { position: relative; }
-      .days i.dot::after {
-        content: "";
-        width: 4px; height: 4px; border-radius: 50%;
-        background: #0e9a8c;
-        position: absolute;
-        bottom: 3px;
-      }
-      .legend { display: flex; justify-content: space-between; gap: 8px; margin-top: 8px; font-size: 11px; color: #3e5660; }
-      .legend em { color: #0b6e64; font-style: normal; font-weight: 700; }
-      .add {
-        display: block;
-        text-align: center;
-        margin-top: 10px;
-        padding: 8px;
-        border-radius: 12px;
-        background: #0b6b60;
-        color: #f4fffc;
-        font-size: 13px;
-        font-weight: 700;
-      }
-      .search, .chips { margin-top: 8px; }
-      .search {
-        padding: 8px 10px;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.86);
-        color: #3e5660;
-        font-size: 12px;
-      }
-      .chips { display: flex; gap: 6px; }
-      .chips span {
-        padding: 4px 8px;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.72);
-        color: #4e6872;
-        font-size: 11px;
-        font-weight: 700;
-      }
-      .chips .on { background: #0b6b60; color: #f4fffc; }
-      .person { margin-top: 8px; padding: 10px; }
-      .row { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
-      .person b { font-size: 14px; }
-      .pill { padding: 2px 7px; border-radius: 999px; background: rgba(255, 255, 255, 0.72); color: #173038; font-size: 11px; font-weight: 700; }
-      .person small { display: block; margin-top: 2px; color: #4e6872; font-size: 12px; }
-      .person .due { color: #173038; font-weight: 650; font-size: 13px; }
+      .screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
       section { padding: 56px 0; }
       .section-title, .panel h2 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 42px); letter-spacing: -0.04em; line-height: 1.15; font-weight: 700; }
       .features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -223,7 +150,6 @@
       .panel h2 { font-size: 24px; }
       .panel p { margin: 0; color: var(--muted); }
       .shots { display: flex; justify-content: center; gap: 28px; margin-top: 32px; }
-      .shots .device { height: 560px; }
       footer {
         display: flex;
         justify-content: space-between;
@@ -270,25 +196,7 @@
         <div class="stage">
           <div class="device tilt" aria-hidden="true">
             <div class="screen">
-              <div class="top">
-                <div><img src="media/avatar.png" alt="" /><h2>Follow-ups</h2><p class="date">Tuesday, October 13</p></div>
-                <svg class="gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg>
-              </div>
-              <div class="card">
-                <div class="eyebrow">Today</div>
-                <strong>1 follow-up</strong>
-                <p>Maya Ellison</p>
-              </div>
-              <div class="card">
-                <div class="month"><span>‹</span>October 2026<span>›</span></div>
-                <div class="days">
-                  <b>S</b><b>M</b><b>T</b><b>W</b><b>T</b><b>F</b><b>S</b>
-                  <i></i><i></i><i></i><i></i><i>1</i><i>2</i><i>3</i>
-                  <i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>10</i>
-                  <i class="dot">11</i><i>12</i><i class="today dot">13</i><i>14</i><i>15</i><i class="dot">16</i><i>17</i>
-                </div>
-                <div class="legend"><em>Today</em><span>Dots are follow-ups.</span></div>
-              </div>
+              <img src="media/screen-calendar.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -312,50 +220,12 @@
         <div class="shots">
           <div class="device">
             <div class="screen">
-              <div class="top">
-                <div><img src="media/avatar.png" alt="" /><h2>Follow-ups</h2><p class="date">Tuesday, October 13</p></div>
-                <svg class="gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>
-              </div>
-              <div class="card">
-                <div class="eyebrow">Today</div>
-                <strong>1 follow-up</strong>
-                <p>Maya Ellison</p>
-              </div>
-              <div class="card">
-                <div class="month"><span>‹</span>October 2026<span>›</span></div>
-                <div class="days">
-                  <b>S</b><b>M</b><b>T</b><b>W</b><b>T</b><b>F</b><b>S</b>
-                  <i></i><i></i><i></i><i></i><i>1</i><i>2</i><i>3</i>
-                  <i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>10</i>
-                  <i class="dot">11</i><i>12</i><i class="today dot">13</i><i>14</i><i>15</i><i class="dot">16</i><i>17</i>
-                </div>
-              </div>
+              <img src="media/screen-day.jpg" alt="A day's follow-ups, with David Hii and Lau" />
             </div>
           </div>
           <div class="device">
             <div class="screen">
-              <div class="top">
-                <div><img src="media/avatar.png" alt="" /><h2>Customers</h2><p class="date">3 active</p></div>
-                <svg class="gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>
-              </div>
-              <div class="add">Add customer</div>
-              <div class="search">Search name, phone, industry, tag</div>
-              <div class="chips"><span>All</span><span class="on">Active</span><span>Won</span><span>Lost</span></div>
-              <div class="card person">
-                <div class="row"><b>Maya Ellison</b><span class="pill">Active</span></div>
-                <small>Independent school admissions</small>
-                <div class="due">Due today</div>
-              </div>
-              <div class="card person">
-                <div class="row"><b>Julian Park</b><span class="pill">Active</span></div>
-                <small>Commercial insurance</small>
-                <div class="due">Due Fri, Oct 16</div>
-              </div>
-              <div class="card person">
-                <div class="row"><b>Elena Rossi</b><span class="pill">Active</span></div>
-                <small>B2B software</small>
-                <div class="due">Due Sun, Oct 11</div>
-              </div>
+              <img src="media/screen-customers.jpg" alt="Customer list with David Hii, Lau, Andrew, and Ting" />
             </div>
           </div>
         </div>
